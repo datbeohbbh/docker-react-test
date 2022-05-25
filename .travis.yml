@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -f Dockerfile.dev -t datbeohbbh/docker-react-test:lastest .
+  - docker build -f Dockerfile.dev -t datbeohbbh/docker-react-test .
 
 script:
   - docker run -e CI=true datbeohbbh/docker-react-test npm run test -- --coverage
